@@ -29,8 +29,7 @@ Notes
     The script only sends messages to Discord. There is no back-transmission of messages from Discord to Telegram.
 
 ## License
-
-This script is licensed under the MIT License. For more information, please see the LICENSE file.
+This script is licensed under the [MIT License](LICENSE). For more information, please see the [LICENSE](LICENSE) file.
 
 
 ## Author
