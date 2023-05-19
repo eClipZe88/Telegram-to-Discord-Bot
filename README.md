@@ -13,20 +13,26 @@ This is a really basic and simple Python script that retrieves messages from a T
 
 ## Usage
 
-Run the script, and it will continuously look for new updates in the Telegram channel. Once a new message is found, it will be sent to the Discord channel.
+Run the script, and it will continuously monitor for new updates in the Telegram channel. Once a new message is found, it will be copied and sent to the Discord channel. The script also supports the transmission of images through links found within the Telegram messages.
 
 To run the script, open a command prompt or terminal window and navigate to the directory where the script is located. Execute the following command:
 
-<pre><code>python Telegram_To_Discord.py
-</code></pre>
+```bash
+python Telegram_To_Discord.py
+```
 
-
-The script will run in the background, waiting for new messages. You can stop it by pressing Ctrl+C in the command prompt.
+The script will run in the background, patiently waiting for new messages. You can stop it by pressing Ctrl+C in the command prompt.
 Notes
 
-    The script uses the time.sleep(1) function to wait for one second before checking for more updates. You can adjust the waiting time by modifying the parameter of sleep.
-    The script only handles text messages. Other types of messages, such as images or documents, will be ignored.
-    The script only sends messages to Discord. There is no back-transmission of messages from Discord to Telegram.
+    The script uses the time.sleep(1) function to pause for one second before checking for more updates. This interval between checks can be adjusted by modifying the parameter of the sleep function.
+
+    The script handles text messages and image links (ending in .jpg, .gif, or .png). Other types of messages, such as documents or non-image media, will not be transmitted to Discord.
+
+    The script only sends messages from Telegram to Discord. It does not support back-transmission of messages from Discord to Telegram.
+
+    The script uses exception handling to manage errors that may occur during execution, such as network issues. In such cases, the script will wait for 5 seconds before retrying.
+
+Remember to provide the necessary permissions for your bots in both Telegram and Discord for smooth operation.
 
 ## License
 This script is licensed under the [MIT License](LICENSE). For more information, please see the [LICENSE](LICENSE) file.
