@@ -3,14 +3,14 @@ import requests
 import json
 
 # Telegram settings
-telegram_bot_token = "your_telegram_bot_token"
+telegram_bot_token = "your_telegram_bot_token"  # Put your telegram bot token here
 telegram_url = f"https://api.telegram.org/bot{telegram_bot_token}/getUpdates"
 telegram_offset = 0
 telegram_channel_id = "your_telegram_channel_id"  # Put your channel ID here
 
 # Discord settings
-discord_bot_token = "your_discord_bot_token"
-discord_channel_id = "your_discord_channel_id"
+discord_bot_token = "your_discord_bot_token"    # Put your discord token here
+discord_channel_id = "your_discord_channel_id"  # Put your channel ID here
 discord_url = f"https://discord.com/api/channels/{discord_channel_id}/messages"
 discord_headers = {"Authorization": f"Bot {discord_bot_token}", "Content-Type": "application/json"}
 
